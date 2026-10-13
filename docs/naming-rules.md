@@ -190,6 +190,37 @@ Remember that this is a style choice. Other C# projects may use private fields w
 
 Start interface names with an uppercase `I`, followed by a PascalCase name.
 
+### Example: `IDamageable.cs`
+
+The following example demonstrates interface, method, and parameter naming conventions in C#.
+
+```csharp
+/// <summary>
+/// Defines a contract for objects that can receive damage.
+/// </summary>
+public interface IDamageable
+{
+    /// <summary>
+    /// Applies damage to the implementing object.
+    /// </summary>
+    /// <param name="damageAmount">The amount of damage to apply.</param>
+    void TakeDamage(int damageAmount);
+}
+```
+
+#### Naming Conventions Demonstrated
+
+| Code element | Convention | Explanation |
+|---|---|---|
+| `IDamageable` | `I` + PascalCase | Interface names begin with an uppercase `I`, followed by a PascalCase name. |
+| `TakeDamage` | PascalCase | Method names begin with an uppercase letter, and each word starts with a capital letter. |
+| `damageAmount` | camelCase | Parameter names begin with a lowercase letter, with subsequent words capitalized. |
+| `///` | XML documentation comments | Three-slash comments document types, methods, and parameters. Compatible IDEs can display this information in tooltips. |
+
+**Key takeaway:** Consistent naming helps developers recognize the purpose of an identifier and distinguish interfaces, methods, and parameters when reading code.
+
+**Related example:** See [`examples/IDamageable.cs`](../examples/IDamageable.cs) for the standalone source file.
+
 ### Good example
 
 ```csharp
